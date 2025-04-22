@@ -16,7 +16,12 @@ Esta es una API RESTful que proporciona información sobre varios animales, incl
 
 ## Requisitos
 Para ejecutar esta API localmente, necesitas tener instalado Python 3.x y las siguientes dependencias:
-- Flask
+
+- Flask.
+
+Para poner a prueba a la API debe tener instalado:
+
+- Postman.
 
 ## Instalación
 1. Clona este repositorio:
