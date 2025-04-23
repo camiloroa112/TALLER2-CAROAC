@@ -12,7 +12,7 @@ class Perro(Animal):
     def get_color(self):
         return self.__color
     
-    def set_raza(self, nueva_raza):
+    def set_raza(self, nueva_raza: str):
         self.__raza = nueva_raza
     
     def emitir_sonido(self):

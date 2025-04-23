@@ -58,26 +58,31 @@ def index():
     else: 
         _animal = request.form['animal'].lower()
 
-        # Si el usuario ingreso en el formulario un perro
+        # Si el usuario selecciona en la lista un perro
         if _animal == 'perro':
             animal = get_perro()[0].get_json()
             img_url = url_for('static', filename='img/perro.jpg')
 
+        # Si el usuario selecciona en la lista un huron
         elif _animal == 'huron':
             animal = get_huron()[0].get_json()
             img_url = url_for('static', filename='img/huron.jpg')
 
+        # Si el usuario selecciona en la lista un gato
         elif _animal == 'gato':
             animal = get_gato()[0].get_json()
             img_url = url_for('static', filename='img/gato.jpg')
         
+        # Si el usuario selecciona en la lista una boa
         elif _animal in ['boa', 'boa constrictor']:
             animal = get_boa_constrictor()[0].get_json()
             img_url = url_for('static', filename='img/boa.jpg')
         
+        # Para cualquier otro caso
         else:
             animal = {"error": "Animal no encontrado"}
 
+        # Visualización en la página
         return render_template('animals.html', data = json.dumps(animal, indent = 4, ensure_ascii = False), img_url = img_url, selected_animal = _animal)
 
 # Ejecutando App

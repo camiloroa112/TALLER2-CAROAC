@@ -16,7 +16,7 @@ class Animal(iAnimal):
     def get_peso(self) -> float:
         return self._peso
     
-    def comer(self, kilos_concentrado) -> None:
+    def comer(self, kilos_concentrado: int) -> None:
         self._kilos_comidos += kilos_concentrado
 
     def get_kilos_comidos(self) -> float:
